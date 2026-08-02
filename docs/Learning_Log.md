@@ -6,7 +6,6 @@ This document tracks my progress throughout my RTL Design Journey.
 
 # Day 1
 
-**Date:** 31 July 2026
 
 ## Topic
 
@@ -54,3 +53,50 @@ This document tracks my progress throughout my RTL Design Journey.
 ## Next Goal
 
 Design and understand a 1-bit Register.
+
+
+
+---
+
+# Day 2
+
+
+## Topic
+
+- Write Enable (WE)
+- 1-bit Register Architecture
+
+---
+
+## What I Learned
+
+- A D Flip-Flop alone cannot selectively hold data.
+- A Write Enable (WE) signal allows a register to either load new data or retain its current value.
+- WE is not an input to a standard D Flip-Flop.
+- A 2:1 Multiplexer placed before the D Flip-Flop selects between:
+  - New Data (D)
+  - Current Output (Q)
+- A 1-bit Register is implemented using:
+  - One D Flip-Flop
+  - One 2:1 Multiplexer
+
+---
+
+## My Understanding
+
+A register only updates when WE = 1.
+When WE = 0, the multiplexer feeds the current value (Q) back into the D input, so the next clock edge stores the same value again.
+
+---
+
+## Questions I Asked
+
+- Why can't WE be connected directly to D?
+- Why shouldn't WE gate the clock?
+- How many DFFs and MUXes are required in a 32×32 Register File?
+
+---
+
+## Next Goal
+
+Design a complete 1-bit Register and understand its timing before implementing it in Verilog.
