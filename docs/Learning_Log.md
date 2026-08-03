@@ -100,3 +100,27 @@ When WE = 0, the multiplexer feeds the current value (Q) back into the D input, 
 ## Next Goal
 
 Design a complete 1-bit Register and understand its timing before implementing it in Verilog.
+
+
+## Day 3
+
+### Topic
+- 1-bit Register
+- Verilog RTL
+- Testbench
+- GTKWave
+
+### What I Learned
+- Designed a 1-bit register using a D Flip-Flop and Write Enable.
+- Wrote synthesizable RTL.
+- Created a testbench.
+- Simulated using Icarus Verilog.
+- Verified functionality using GTKWave.
+- Understood why Q is initially unknown (X) without a reset.
+
+### Challenges
+- Incorrect Icarus compile command (`-o` usage).
+- Fixed module instantiation issues.
+
+### Status
+✅ Project Completed
